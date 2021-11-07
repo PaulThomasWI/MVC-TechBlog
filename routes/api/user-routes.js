@@ -142,7 +142,7 @@ router.post('/login', (req, res) => {
         req.session.github   = dbData.github;
         req.session.loggedIn = true;
   
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
+        res.json({ user: dbData, message: 'You are now logged in!' });
       });
     });
 });

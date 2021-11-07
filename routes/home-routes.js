@@ -46,38 +46,6 @@ router.get('/', (req, res) => {
 
 /*
   ======================================================================
-    / Login route
-  ======================================================================
-*/
-router.get('/login', (req, res) => {
-  console.log('/login route');  
-
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  
-  res.render('login');
-});
-
-/*
-  ======================================================================
-    / Signup route
-  ======================================================================
-*/
-router.get('/signup', (req, res) => {
-  console.log('/signup route');  
-
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  
-  res.render('signup');
-});
-
-/*
-  ======================================================================
     / Post route
   ======================================================================
 */
@@ -118,6 +86,38 @@ router.get('/post/:id', (req, res) => {
         res.render('single-post', { post, loggedIn: req.session.loggedIn });
       })
       .catch(err => { res.status(500).json(err); });
+});
+
+/*
+  ======================================================================
+    / Login route
+  ======================================================================
+*/
+router.get('/login', (req, res) => {
+  console.log('/login route');  
+
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  
+  res.render('login');
+});
+
+/*
+  ======================================================================
+    / Signup route
+  ======================================================================
+*/
+router.get('/signup', (req, res) => {
+  console.log('/signup route');  
+
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  
+  res.render('signup');
 });
 
 module.exports = router;
