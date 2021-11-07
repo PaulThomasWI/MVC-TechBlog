@@ -15,13 +15,13 @@
       <h1 class="has-text-black px-3 py-3 has-text-weight-bold">MVC Tech Blog</h1>
       <nav class="navbar mt-2">
           {{#if loggedIn}}
-            <a href="/" class="navbar-item is-hoverable pt-1">home</a> 
-            <a href="/dashboard" class="navbar-item is-hoverable pt-1">dashboard</a>
-            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
-            <button id="logout" class="button is-danger">logout</button>
+            <a href="/" class="navbar-item is-hoverable pt-1"><i class="fas fa-home"></i></a> 
+            <a href="/dashboard" class="navbar-item is-hoverable pt-1"><i class="fas fa-tachometer-alt"></i></a>
+            <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4"><i class="fas fa-plus"></i></a>
+            <button id="logout" class="button is-danger"><i class="fas fa-sign-in-alt"></i></button>
           {{else}}
-            <a href="/" class="navbar-item is-hoverable pt-1">home</a>
-            <a href="/login" class="button is-primary">login</a>
+            <a href="/" class="navbar-item is-hoverable pt-1"><i class="fas fa-home"></i></a>
+            <a href="/login" class="button is-primary"><i class="fas fa-sign-in-alt"></i></a>
           {{/if}}
       </nav>
   </header>
@@ -31,16 +31,18 @@
   </main>
 
   <footer class="footer rows pb-2">
-      <div class="row-is-full content has-text-centered">
-          <p>
-          <a href="/">home</a>{{#if loggedIn}} | 
-          <a href="/dashboard/">dashboard</a> | 
-          <a href="/dashboard/create/">create post</a>
-          {{else}}
-            | <a href="/login/">login</a>
-          {{/if}}
-          </p>
-      </div>
+    <div class="row-is-full content has-text-centered">
+        <p>
+        <a href="/"><i class="fas fa-home"></i></a>
+        {{#if loggedIn}} | 
+          <a href="/dashboard/"><i class="fas fa-tachometer-alt"></i></a> | 
+          <a href="/dashboard/create/"><i class="fas fa-plus"></i></a>
+        {{else}}
+          | <a href="/login/"><i class="fas fa-sign-in-alt"></i></a>
+        {{/if}}
+        </p>
+    </div>
+
     <div class="row-is-full content has-text-centered">
       <p>
         by <a href="https://github.com/PaulThomasWI">Paul Thomas</a> | made with <a href="https://bulma.io/">bulma</a> | source code:
