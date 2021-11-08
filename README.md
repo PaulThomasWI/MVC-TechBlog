@@ -14,7 +14,7 @@ Writing about tech can be just as important as making it. Developers spend plent
 - Sequelize
 
 # Heroku Link
-https://git.heroku.com/fierce-meadow-01180.git
+https://fierce-meadow-01180.herokuapp.com/
 
 Start: node server.js
 Seed: node seeds/index.js
